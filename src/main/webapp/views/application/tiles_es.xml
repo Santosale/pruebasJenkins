@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+	<definition name="application/create" extends="master.page">	
+		<put-attribute name="title" value="Aplicar para un viaje" />
+		<put-attribute name="body" value="/views/application/create.jsp" />
+	</definition>
+	
+	<definition name="application/list" extends="master.page">	
+		<put-attribute name="title" value="Lista de aplicaciones" />
+		<put-attribute name="body" value="/views/application/list.jsp" />
+	</definition>
+	
+	<definition name="application/display" extends="master.page">	
+		<put-attribute name="title" value="Aplicación" />
+		<put-attribute name="body" value="/views/application/display.jsp" />
+	</definition>
+	
+	<definition name="application/addcreditcard" extends="master.page">	
+		<put-attribute name="title" value="Añadir Credit Card" />
+		<put-attribute name="body" value="/views/application/addcreditcard.jsp" />
+	</definition>
+	
+	<definition name="application/edit" extends="master.page">	
+		<put-attribute name="title" value="Editar aplicación" />
+		<put-attribute name="body" value="/views/application/edit.jsp" />
+	</definition>
+	
+</tiles-definitions>

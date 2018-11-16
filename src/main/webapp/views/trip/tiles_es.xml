@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+	<definition name="trip/search" extends="master.page">	
+		<put-attribute name="title" value="Buscar Viaje" />
+		<put-attribute name="body" value="/views/trip/search.jsp" />
+	</definition>
+	
+	<definition name="trip/create" extends="master.page">	
+		<put-attribute name="title" value="Crear viaje" />
+		<put-attribute name="body" value="/views/trip/create.jsp" />
+	</definition>
+	
+	<definition name="trip/list" extends="master.page">	
+		<put-attribute name="title" value="Viajes" />
+		<put-attribute name="body" value="/views/trip/list.jsp" />
+	</definition>
+	
+	<definition name="trip/display" extends="master.page">	
+		<put-attribute name="title" value="Viaje" />
+		<put-attribute name="body" value="/views/trip/display.jsp" />
+	</definition>
+	
+	<definition name="trip/edit" extends="master.page">	
+		<put-attribute name="title" value="Editar Viaje" />
+		<put-attribute name="body" value="/views/trip/edit.jsp" />
+	</definition>
+	
+    <definition name="trip/cancel" extends="master.page">	
+		<put-attribute name="title" value="Cancelar viaje" />
+		<put-attribute name="body" value="/views/trip/cancel.jsp" />
+	</definition>
+	
+</tiles-definitions>
