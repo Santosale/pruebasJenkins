@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * i18n-l10n.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd 
+	">
+
+	<util:list id="messages">
+		<value>/views/master-page/messages</value>
+		<value>/views/misc/messages</value>
+		<value>/views/security/messages</value>		
+		<value>/views/welcome/messages</value>
+		
+		<value>/views/termCondition/messages</value>
+		
+		<value>/views/actor/messages</value>
+		<value>/views/user/messages</value>
+		
+		<value>/views/aboutUs/messages</value>
+		<value>/views/dashboard/messages</value>
+		
+		<value>/views/creditcard/messages</value>
+		<value>/views/configuration/messages</value>
+		
+		<value>/views/raffle/messages</value>
+		<value>/views/ticket/messages</value>
+		
+		<value>/views/level/messages</value>
+		
+		<value>/views/survey/messages</value>		
+		<value>/views/evaluation/messages</value>
+		<value>/views/comment/messages</value>
+		<value>/views/tag/messages</value>
+		
+		<value>/views/plan/messages</value>
+		<value>/views/subscription/messages</value>
+		<value>/views/level/messages</value>		
+		
+		<value>/views/notification/messages</value>
+		<value>/views/bargain/messages</value>
+		<value>/views/sponsorship/messages</value>
+		<value>/views/category/messages</value>
+		
+		<value>/views/company/messages</value>
+		
+		<value>/views/groupon/messages</value>
+		<value>/views/participation/messages</value>
+		
+		<value>/views/contact/messages</value>
+				
+	</util:list>
+
+</beans>

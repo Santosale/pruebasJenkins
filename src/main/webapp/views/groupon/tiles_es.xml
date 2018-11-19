@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+	<definition name="groupon/list" extends="master.page">	
+		<put-attribute name="title" value="Conjuntas" />
+		<put-attribute name="body" value="/views/groupon/list.jsp" />
+	</definition>
+	
+	<definition name="groupon/display" extends="master.page">	
+		<put-attribute name="title" value="Conjunta" />
+		<put-attribute name="body" value="/views/groupon/display.jsp" />
+	</definition>
+	
+	<definition name="groupon/edit" extends="master.page">	
+		<put-attribute name="title" value="Editar Conjunta" />
+		<put-attribute name="body" value="/views/groupon/edit.jsp" />
+	</definition>
+	
+	<definition name="groupon/create" extends="master.page">	
+		<put-attribute name="title" value="Crear Conjunta" />
+		<put-attribute name="body" value="/views/groupon/edit.jsp" />
+	</definition>
+	
+</tiles-definitions>

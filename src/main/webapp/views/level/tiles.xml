@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="level/list" extends="master.page">	
+		<put-attribute name="title" value="Levels" />
+		<put-attribute name="body" value="/views/level/list.jsp" />
+	</definition>
+	
+	<definition name="level/display" extends="master.page">	
+		<put-attribute name="title" value="Level" />
+		<put-attribute name="body" value="/views/level/display.jsp" />
+	</definition>
+	
+	<definition name="level/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit Level" />
+		<put-attribute name="body" value="/views/level/edit.jsp" />
+	</definition>
+	
+	<definition name="level/create" extends="master.page">	
+		<put-attribute name="title" value="Create Level" />
+		<put-attribute name="body" value="/views/level/edit.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,2565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * PopulateDatabase.xml * * Copyright (C) 2017 Universidad de Sevilla 
+
+	* * The use of this project is hereby constrained to the conditions of the 
+
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- User accounts -->
+	<bean id="userAccountAdministrator" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMIN" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountUser1" class="security.UserAccount">
+		<property name="username" value="user1" />
+		<property name="password" value="24c9e15e52afc47c225b757e7bee1f9d" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountUser2" class="security.UserAccount">
+		<property name="username" value="user2" />
+		<property name="password" value="7e58d63b60197ceb55a1c487989a3720" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountUser3" class="security.UserAccount">
+		<property name="username" value="user3" />
+		<property name="password" value="92877af70a45fd6a2ed7fe81e1236b78" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccountUser4" class="security.UserAccount">
+		<property name="username" value="user4" />
+		<property name="password" value="3f02ebe3d7929b091e3d8ccfde2f3bc6" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountUser5" class="security.UserAccount">
+		<property name="username" value="user5" />
+		<property name="password" value="0a791842f52a0acfbb3a783378c066b8" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountUser6" class="security.UserAccount">
+		<property name="username" value="user6" />
+		<property name="password" value="affec3b64cf90492377a8114c86fc093" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Moderators UserAccount -->	
+	<bean id="userAccountModerator1" class="security.UserAccount">
+		<property name="username" value="moderator1" />
+		<property name="password" value="38caf4a470117125b995f7ce53e6e6b9" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MODERATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountModerator2" class="security.UserAccount">
+		<property name="username" value="moderator2" />
+		<property name="password" value="95d88ad73653fc7ad4fec3bc56677c3c" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MODERATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Company UserAccount -->
+	<bean id="userAccountCompany1" class="security.UserAccount">
+		<property name="username" value="company1" />
+		<property name="password" value="df655f976f7c9d3263815bd981225cd9" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COMPANY" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountCompany2" class="security.UserAccount">
+		<property name="username" value="company2" />
+		<property name="password" value="d196a28097115067fefd73d25b0c0be8" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COMPANY" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountCompany3" class="security.UserAccount">
+		<property name="username" value="company3" />
+		<property name="password" value="e828ae3339b8d80b3902c1564578804e" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COMPANY" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountCompany4" class="security.UserAccount">
+		<property name="username" value="company4" />
+		<property name="password" value="856dfd9045541fa727ef6ad392835eb0" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COMPANY" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountCompany5" class="security.UserAccount">
+		<property name="username" value="company5" />
+		<property name="password" value="efa5a30f11d85b93518ba6cc3f229b14" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COMPANY" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountCompany6" class="security.UserAccount">
+		<property name="username" value="company6" />
+		<property name="password" value="65ea58759487b11278c234e510c34817" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COMPANY" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Sponsor UserAccount -->
+	<bean id="userAccountSponsor1" class="security.UserAccount">
+		<property name="username" value="sponsor1" />
+		<property name="password" value="42c63ad66d4dc07ed17753772bef96d6" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountSponsor2" class="security.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="3dc67f80a03324e01b1640f45d107485" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountSponsor3" class="security.UserAccount">
+		<property name="username" value="sponsor3" />
+		<property name="password" value="857a54956061fdc1b88d7722cafe6519" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccountSponsor4" class="security.UserAccount">
+		<property name="username" value="sponsor4" />
+		<property name="password" value="a8be034fe44a453e912feadc414dc803" />
+		<property name="enabled" value="true" /> <property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+		
+	<!-- User -->
+	<bean id="user1" class="domain.User">
+		<property name="name" value="User1" />
+		<property name="surname" value="Martínez ruiz" />
+		<property name="email" value="user1@acme.com" />
+		<property name="phone" value="+34618396001" />
+		<property name="address" value="Calle Sin Número, 123" />
+		<property name="avatar" value="https://www.w3schools.com/howto/img_avatar.png" />
+		<property name="points" value="620" />
+		<property name="userAccount" ref="userAccountUser1" />
+		<property name="identifier" value="20063918-Y" />
+		<property name="isPublicWishList" value="true" />
+		<property name="wishList">
+			<list>
+				<ref bean="bargain1" />
+				<ref bean="bargain2" />
+				<ref bean="bargain3" />
+				<ref bean="bargain4" />
+				<ref bean="bargain5" />
+				<ref bean="bargain6" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="user2" class="domain.User">
+		<property name="name" value="User2" />
+		<property name="surname" value="López González" />
+		<property name="email" value="user2@acme.com" />
+		<property name="address" value="Calle Falsa, 123" />
+		<property name="avatar" value="https://www.sahanet.net/wp-content/uploads/2018/02/avatar-2-300x300.png" />
+		<property name="points" value="50" />
+		<property name="userAccount" ref="userAccountUser2" />
+		<property name="identifier" value="20063918-Y" />
+		<property name="isPublicWishList" value="true" />
+		<property name="wishList">
+			<list>
+				<ref bean="bargain1" />
+				<ref bean="bargain2" />
+				<ref bean="bargain3" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="user3" class="domain.User">
+		<property name="name" value="User3" />
+		<property name="surname" value="García Trinidad" />
+		<property name="email" value="user3@acme.com" />
+		<property name="phone" value="+3461738000" />
+		<property name="avatar" value="http://partnertekst.dk/wp-content/uploads/avatar-7.png" />
+		<property name="points" value="20" />
+		<property name="userAccount" ref="userAccountUser3" />
+		<property name="identifier" value="20063918-Y" />
+		<property name="isPublicWishList" value="false" />
+		<property name="wishList">
+			<list>
+				<ref bean="bargain4" />
+				<ref bean="bargain5" />
+				<ref bean="bargain6" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="user4" class="domain.User">
+		<property name="name" value="User4" />
+		<property name="surname" value="Sánchez Ortiz" />
+		<property name="email" value="user4@acme.com" />
+		<property name="avatar" value="http://partnertekst.dk/wp-content/uploads/avatar-7.png" />
+		<property name="points" value="300" />
+		<property name="userAccount" ref="userAccountUser4" />
+		<property name="identifier" value="20063918-Y" />
+		<property name="isPublicWishList" value="false" />
+		<property name="wishList">
+			<list>
+				<ref bean="bargain5" />
+				<ref bean="bargain6" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="user5" class="domain.User">
+		<property name="name" value="User5" />
+		<property name="surname" value="Casillas Martín" />
+		<property name="email" value="user5@acme.com" />
+		<property name="phone" value="+3461738010" />
+		<property name="avatar" value="http://partnertekst.dk/wp-content/uploads/avatar-7.png" />
+		<property name="points" value="100" />
+		<property name="userAccount" ref="userAccountUser5" />
+		<property name="identifier" value="20063918-Y" />
+		<property name="isPublicWishList" value="false" />
+		<property name="wishList">
+			<list>
+				<ref bean="bargain4" />
+				<ref bean="bargain5" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="user6" class="domain.User">
+		<property name="name" value="User6" />
+		<property name="surname" value="Crespo Sánchez" />
+		<property name="email" value="user6@acme.com" />
+		<property name="phone" value="+3461738011" />
+		<property name="avatar" value="http://partnertekst.dk/wp-content/uploads/avatar-7.png" />
+		<property name="points" value="-100" />
+		<property name="userAccount" ref="userAccountUser6" />
+		<property name="identifier" value="20063918-Y" />
+		<property name="isPublicWishList" value="false" />
+		<property name="wishList">
+			<list>
+				<ref bean="bargain5" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Administrator -->
+	<bean id="administrator" class="domain.Administrator">
+		<property name="name" value="Administrator" />
+		<property name="surname" value="1" />
+		<property name="email" value="administrator@acme.com" />
+		<property name="userAccount" ref="userAccountAdministrator" />
+		<property name="identifier" value="20063918-Y" />
+	</bean>
+	
+	<bean id="internationalization1" class="domain.Internationalization">
+
+		<property name="countryCode" value="es" />
+		
+		<property name="messageCode" value="term.condition" />
+
+		<property name="value" value="INFORMACIÓN RELEVANTE
+
+Es requisito necesario para el uso de la web que lea y acepte los siguientes Términos y
+	Condiciones que a continuación se redactan. El uso de nuestros
+	servicios implicará que usted
+	ha leído y aceptado los Términos y Condiciones de Uso en el presente
+	documento. 
+	
+	INFORMACIÓN PERSONAL
+	
+	Un moderador puede puede borrar un comentario, chollo... si considera que afecta moralmente a otros usuarios.
+	Si cualquier usuario quiere borrar algún dato personal y la aplicación no le ofrece la posibilidad de hacerlo, debe ponerse en contacto con aisscreamacas@gmail.com
+
+
+	COMPROBACIÓN ANTIFRAUDE
+
+La compra del usuario puede ser aplazada para la comprobación
+	antifraude. También puede ser suspendida por más tiempo para una
+	investigación más rigurosa, para evitar transacciones fraudulentas.
+
+	PRIVACIDAD
+
+Este sitio web www.acme.com garantiza que la información personal que usted envía
+	cuenta con la seguridad necesaria. Los datos ingresados por usuario  no serán
+	entregados a terceros, salvo que deba ser revelada en cumplimiento a
+	una orden judicial o requerimientos legales.
+
+Acme Bargains and Raffles reserva los derechos de cambiar o de modificar
+	estos términos sin previo aviso.
+	
+	LEGISLACIÓN APLICABLE
+El Aviso Legal y las Condiciones Generales de Uso se rigen por las siguientes normas:
+
+La Ley 34/2002, de 11 de julio, de Services de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE) (particularmente, su artículo 10).
+La Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD).
+El Real Decreto 1720/2007, de 21 de diciembre, por el que se aprueba el Reglamento de desarrollo de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal." />
+
+	</bean>
+	
+	<bean id="internationalization2" class="domain.Internationalization">
+
+		<property name="countryCode" value="en" />
+		
+		<property name="messageCode" value="term.condition" />
+
+		<property name="value" value="RELEVANT INFORMATION 
+
+ It is a necessary requirement for the use of this web, that you read and accept the following Terms and
+Conditions that are written below. The use of our
+services will mean that you have read and accepted the Terms and Conditions of Use in this
+document. 
+
+ PERSONAL INFORMATION
+ 
+ 
+An moderator can delete a comment, bargain... if he/she think that it affects other users morally.
+If any user wants to delete some personal data and the application does not have the possibility to do that, you should contact with aisscreamacas@gmail.com
+
+
+ ANTI-FRAUD VERIFICATION 
+
+ The user's purchase can be postponed for checking
+anti fraud. It can also be suspended for a longer time for a
+more rigorous investigation, to avoid fraudulent transactions. 
+
+ PRIVACY 
+
+This site web www.acme.com guarantees that the personal information you send
+has the necessary security. The data entered by user will not be
+delivered to third parties, unless it must be disclosed in compliance with
+an order
+
+Acme Chollos y Rifas reserves the rights to change or modify
+these terms without prior notice.
+
+   APPLICABLE LEGISLATION 
+    
+ The  Legal Notice and the General Conditions of Use  are governed by the following rules: 
+
+The Law 34/2002, of 11 July, on Services of the Society of Information and Electronic Commerce (LSSI-CE)(particularly, article 10).
+The Organic Law 15/1999, of December 13, Protection of Personal Data (LOPD).
+The Royal Decree 1720/2007, of December 21, which approves the Regulation of development of the Organic Law 15/1999, of December 13, Protection of Personal Data." />
+
+	</bean>
+	
+	<bean id="internationalization3" class="domain.Internationalization">
+
+		<property name="countryCode" value="en" />
+		
+		<property name="messageCode" value="welcome.message" />
+
+		<property name="value" value="Acme Bargains and Raffles"/>
+	</bean>
+	
+	<bean id="internationalization4" class="domain.Internationalization">
+
+		<property name="countryCode" value="es" />
+		
+		<property name="messageCode" value="welcome.message" />
+
+		<property name="value" value="Acme Chollos y Rifas"/>
+	</bean>
+		
+	<!-- Configuration -->
+	<bean id="configuration" class="domain.Configuration">
+		<property name="name" value="welcome.message" />
+		<property name="slogan" value="Buy different" />
+		<property name="email" value="aisscreamacas@gmail.com" />
+		<property name="banner" value="http://localhost:8080/Acme-Chollos-Rifas/images/logo.jpg" />
+		<property name="defaultAvatar" value="http://localhost:8080/Acme-Chollos-Rifas/images/avatar.jpg" />
+		<property name="defaultImage" value="http://localhost:8080/Acme-Chollos-Rifas/images/link_broken.jpg" />
+	</bean>
+	
+	<!-- Plan -->
+	<bean id="plan1" class="domain.Plan">
+		<property name="name" value="Basic Premium" />
+		<property name="description" value="El plan Basic Premium contará con las siguientes ventajas: 
+		Sus comentarios tendrán más relevancia que los del resto al mostrarse con un fondo color coral,
+		tendrán la opción de añadir imágenes en los comentarios,
+		obtendrán un 2.5% más de descuento en los chollos,
+		derecho a participar en una conjunta incluso tras ser cerrada.		
+		" />
+		<property name="cost" value="5.0" />
+	</bean>
+	
+	<bean id="plan2" class="domain.Plan">
+		<property name="name" value="Gold Premium" />
+		<property name="description" value="El plan Gold Premium cuenta con las siguientes ventajas adicionales: 
+		El descuento en los chollos será mayor, de un 7.5%,
+		tendrá la opción de acceder los chollos desde el momento de la creación y no de su publicación al público general,
+		obtendrá automáticamente un tique de regalo para cada rifa. 
+		" />
+		<property name="cost" value="10.0" />
+	</bean>
+	<!--  -->
+	
+	<!-- Subscription -->
+	<bean id="subscription1" class="domain.Subscription">
+		<property name="payFrecuency" value="Monthly" />
+		<property name="plan" ref="plan1" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="user" ref="user1" />
+	</bean>
+	
+	<bean id="subscription2" class="domain.Subscription">
+		<property name="payFrecuency" value="Anually" />
+		<property name="plan" ref="plan2" />
+		<property name="creditCard" ref="creditCard2" />
+		<property name="user" ref="user2" />
+	</bean>
+	
+	<bean id="subscription3" class="domain.Subscription">
+		<property name="payFrecuency" value="Anually" />
+		<property name="plan" ref="plan2" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="user" ref="user3" />
+	</bean>
+	
+	<bean id="subscription4" class="domain.Subscription">
+		<property name="payFrecuency" value="Quarterly" />
+		<property name="plan" ref="plan1" />
+		<property name="creditCard" ref="creditCard5" />
+		<property name="user" ref="user4" />
+	</bean>
+	<!--  -->
+	
+	<!-- GroupOn -->
+	<bean id="groupon1" class="domain.Groupon">
+		<property name="title" value="Conjunta1" />
+		<property name="description" value="Televisión a un precio reducido si conseguimos las suficientes personas interesadas" />
+		<property name="productName" value="Televisión" />
+		<property name="productUrl" value="https://tiendas.mediamarkt.es/p/tv-led-28-lg-28mt49s-pz-hd-smart-tv-wifi-1360736" />
+		<property name="minAmountProduct" value="10" />
+		<property name="maxDate" value="09/15/2018 15:00" />
+		<property name="originalPrice" value="210.00" />
+		<property name="price" value="180.00" />
+		<property name="discountCode" value="345180318AAAAA"/>
+		<property name="creator" ref="user1" />		
+	</bean>
+	
+	<bean id="groupon2" class="domain.Groupon">
+		<property name="title" value="Conjunta2" />
+		<property name="description" value="Ordenador a un precio excelente y solo depende de ustedes" />
+		<property name="productName" value="Ordenador" />
+		<property name="productUrl" value="https://tiendas.mediamarkt.es/p/pc-gaming-microstar-p443-pcc452-gtx-1070-1364996" />
+		<property name="minAmountProduct" value="30" />
+		<property name="maxDate" value="10/15/2018 16:00" />
+		<property name="originalPrice" value="800.00" />
+		<property name="price" value="650.00" />
+		<property name="creator" ref="user1" />		
+	</bean>
+	
+	<bean id="groupon3" class="domain.Groupon">
+		<property name="title" value="Conjunta3" />
+		<property name="description" value="Teléfono movil a un gran precio" />
+		<property name="productName" value="SmartPhone" />
+		<property name="productUrl" value="https://tiendas.mediamarkt.es/p/movil-xiaomi-redmi-note-4-5.5-full-hd-3gb-1383690" />
+		<property name="minAmountProduct" value="15" />
+		<property name="maxDate" value="03/20/2018 16:00" />
+		<property name="originalPrice" value="200.00" />
+		<property name="price" value="150.00" />
+		<property name="discountCode" value="331120218AAAAA"/>
+		<property name="creator" ref="user1" />		
+	</bean>
+	
+	<bean id="groupon4" class="domain.Groupon">
+		<property name="title" value="Conjunta4" />
+		<property name="description" value="Videoconsola de Sony rebajada si se consigue el apoyo de todos" />
+		<property name="productName" value="Playstation" />
+		<property name="productUrl" value="https://www.game.es/hardware/consola/playstation-4/playstation-4-pro-1tb-blanca-chassis-b/149705" />
+		<property name="minAmountProduct" value="40" />
+		<property name="maxDate" value="04/20/2018 17:00" />
+		<property name="originalPrice" value="400.00" />
+		<property name="price" value="250.00" />
+		<property name="creator" ref="user1" />		
+	</bean>
+	
+	<bean id="groupon5" class="domain.Groupon">
+		<property name="title" value="Conjunta5" />
+		<property name="description" value="Conjunta para conseguir una radio a un mejor precio" />
+		<property name="productName" value="Radio" />
+		<property name="productUrl" value="https://tiendas.mediamarkt.es/p/radio-cd-daewoo-dbu-50-rosa-puerto-usb-1228477" />
+		<property name="minAmountProduct" value="30" />
+		<property name="maxDate" value="10/20/2018 17:00" />
+		<property name="originalPrice" value="46.00" />
+		<property name="price" value="20.00" />
+		<property name="creator" ref="user1" />		
+	</bean>
+	
+	<bean id="groupon6" class="domain.Groupon">
+		<property name="title" value="Conjunta6" />
+		<property name="description" value="Aspiradora para el hogar a un gran precio, depende de ti" />
+		<property name="productName" value="Aspiradora" />
+		<property name="productUrl" value="https://tiendas.mediamarkt.es/p/aspirador-escoba-cecotec-duo-stick-easy-1383667" />
+		<property name="minAmountProduct" value="1" />
+		<property name="maxDate" value="10/21/2018 17:00" />
+		<property name="originalPrice" value="29.00" />
+		<property name="price" value="10.00" />
+		<property name="creator" ref="user1" />		
+	</bean>
+	
+	<bean id="groupon7" class="domain.Groupon">
+		<property name="title" value="Conjunta7" />
+		<property name="description" value="Vuelve a lo clásico con este MP4 rebajado si se consigue un buen apoyo" />
+		<property name="productName" value="MP4" />
+		<property name="productUrl" value="https://tiendas.mediamarkt.es/p/reproductor-mp4-sony-walkman-nwze394r-1312621" />
+		<property name="minAmountProduct" value="35" />
+		<property name="maxDate" value="11/21/2018 17:00" />
+		<property name="originalPrice" value="79.00" />
+		<property name="price" value="59.00" />
+		<property name="creator" ref="user2" />		
+	</bean>
+	
+	<!--  -->
+	
+	<!-- Participation -->
+	<bean id="participation1" class="domain.Participation">
+		<property name="amountProduct" value="3" />
+		<property name="user" ref="user2" />
+		<property name="groupon" ref="groupon1" />						
+	</bean>
+	
+	<bean id="participation2" class="domain.Participation">
+		<property name="amountProduct" value="2" />
+		<property name="user" ref="user3" />
+		<property name="groupon" ref="groupon1" />						
+	</bean>
+	
+	<bean id="participation3" class="domain.Participation">
+		<property name="amountProduct" value="4" />
+		<property name="user" ref="user4" />
+		<property name="groupon" ref="groupon1" />						
+	</bean>
+	
+	<bean id="participation4" class="domain.Participation">
+		<property name="amountProduct" value="3" />
+		<property name="user" ref="user5" />
+		<property name="groupon" ref="groupon1" />						
+	</bean>
+	
+	<bean id="participation5" class="domain.Participation">
+		<property name="amountProduct" value="1" />
+		<property name="user" ref="user6" />
+		<property name="groupon" ref="groupon1" />						
+	</bean>
+	
+	<bean id="participation6" class="domain.Participation">
+		<property name="amountProduct" value="7" />
+		<property name="user" ref="user2" />
+		<property name="groupon" ref="groupon3" />						
+	</bean>
+	
+	<bean id="participation7" class="domain.Participation">
+		<property name="amountProduct" value="7" />
+		<property name="user" ref="user3" />
+		<property name="groupon" ref="groupon3" />						
+	</bean>
+	
+	<bean id="participation8" class="domain.Participation">
+		<property name="amountProduct" value="4" />
+		<property name="user" ref="user4" />
+		<property name="groupon" ref="groupon3" />						
+	</bean>
+	
+	<bean id="participation9" class="domain.Participation">
+		<property name="amountProduct" value="4" />
+		<property name="user" ref="user2" />
+		<property name="groupon" ref="groupon4" />						
+	</bean>
+	
+	<bean id="participation10" class="domain.Participation">
+		<property name="amountProduct" value="4" />
+		<property name="user" ref="user4" />
+		<property name="groupon" ref="groupon4" />						
+	</bean>
+	
+	<bean id="participation11" class="domain.Participation">
+		<property name="amountProduct" value="2" />
+		<property name="user" ref="user2" />
+		<property name="groupon" ref="groupon2" />						
+	</bean>
+	
+	<bean id="participation12" class="domain.Participation">
+		<property name="amountProduct" value="2" />
+		<property name="user" ref="user2" />
+		<property name="groupon" ref="groupon5" />						
+	</bean>
+	
+	<bean id="participation13" class="domain.Participation">
+		<property name="amountProduct" value="2" />
+		<property name="user" ref="user2" />
+		<property name="groupon" ref="groupon6" />						
+	</bean>
+	<!--  -->
+	
+	<!-- Moderator -->
+	<bean id="moderator1" class="domain.Moderator">
+		<property name="name" value="Mario" />
+		<property name="surname" value="Macías Reyes" />
+		<property name="email" value="moderator1@acme.com" />
+		<property name="phone" value="+34602245841" />
+		<property name="address" value="Calle El Río, 2" />
+		<property name="userAccount" ref="userAccountModerator1" />
+		<property name="identifier" value="20063918-Y" />
+	</bean>
+	
+	<bean id="moderator2" class="domain.Moderator">
+		<property name="name" value="José María" />
+		<property name="surname" value="López Menacho" />
+		<property name="email" value="moderator2@acme.com" />
+		<property name="phone" value="+34752354214" />
+		<property name="address" value="Calle García de la Jara, 35" />
+		<property name="userAccount" ref="userAccountModerator2" />
+		<property name="identifier" value="00234559-M" />
+	</bean>
+	
+	<!-- Credit Card -->
+	<bean id="creditCard1" class="domain.CreditCard">
+		<property name="holderName" value="Antonio" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="5471664286416252" />
+		<property name="expirationMonth" value="9" />
+		<property name="expirationYear" value="19" />
+		<property name="cvvcode" value="998" />
+		<property name="user" ref="user1" />
+	</bean>
+
+	<bean id="creditCard2" class="domain.CreditCard">
+		<property name="holderName" value="Paco" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="5229783098148518" />
+		<property name="expirationMonth" value="10" />
+		<property name="expirationYear" value="18" />
+		<property name="cvvcode" value="258" />
+		<property name="user" ref="user2" />
+	</bean>
+	
+	<bean id="creditCard3" class="domain.CreditCard">
+		<property name="holderName" value="Antonio" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="5306320664868959" />
+		<property name="expirationMonth" value="10" />
+		<property name="expirationYear" value="18" />
+		<property name="cvvcode" value="618" />
+		<property name="user" ref="user1" />
+	</bean>
+	
+	<bean id="creditCard4" class="domain.CreditCard">
+		<property name="holderName" value="David" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="4350515568299247" />
+		<property name="expirationMonth" value="11" />
+		<property name="expirationYear" value="19" />
+		<property name="cvvcode" value="608" />
+		<property name="user" ref="user3" />
+	</bean>
+	
+	<bean id="creditCard5" class="domain.CreditCard">
+		<property name="holderName" value="Paco" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="4367834676464317" />
+		<property name="expirationMonth" value="10" />
+		<property name="expirationYear" value="19" />
+		<property name="cvvcode" value="618" />
+		<property name="user" ref="user4" />
+	</bean>
+	
+	<bean id="creditCard6" class="domain.CreditCard">
+		<property name="holderName" value="Alejandro" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="345035739479236" />
+		<property name="expirationMonth" value="2" />
+		<property name="expirationYear" value="20" />
+		<property name="cvvcode" value="147" />
+		<property name="user" ref="user4" />
+	</bean>
+	
+	<bean id="creditCard7" class="domain.CreditCard">
+		<property name="holderName" value="Antonio" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="5378931146110399" />
+		<property name="expirationMonth" value="10" />
+		<property name="expirationYear" value="20" />
+		<property name="cvvcode" value="522" />
+		<property name="user" ref="user1" />
+	</bean>
+	
+	<bean id="creditCard8" class="domain.CreditCard">
+		<property name="holderName" value="Antonio" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4532252568451427" />
+		<property name="expirationMonth" value="05" />
+		<property name="expirationYear" value="19" />
+		<property name="cvvcode" value="145" />
+		<property name="user" ref="user1" />
+	</bean>
+	
+	<bean id="creditCard9" class="domain.CreditCard">
+		<property name="holderName" value="Antonio" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4532252568451427" />
+		<property name="expirationMonth" value="05" />
+		<property name="expirationYear" value="16" />
+		<property name="cvvcode" value="145" />
+		<property name="user" ref="user1" />
+	</bean>
+	
+	<bean id="creditCard10" class="domain.CreditCard">
+		<property name="holderName" value="Antonio" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4532252568451427" />
+		<property name="expirationMonth" value="05" />
+		<property name="expirationYear" value="17" />
+		<property name="cvvcode" value="145" />
+		<property name="user" ref="user1" />
+	</bean>
+	
+	<bean id="creditCard11" class="domain.CreditCard">
+		<property name="holderName" value="Francisco" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4024007187090518" />
+		<property name="expirationMonth" value="05" />
+		<property name="expirationYear" value="20" />
+		<property name="cvvcode" value="147" />
+		<property name="user" ref="user5" />
+	</bean>
+	
+	<bean id="creditCard12" class="domain.CreditCard">
+		<property name="holderName" value="Francisca" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4556484350052417" />
+		<property name="expirationMonth" value="05" />
+		<property name="expirationYear" value="17" />
+		<property name="cvvcode" value="148" />
+		<property name="user" ref="user5" />
+	</bean>
+	
+	<!-- Category -->
+	
+	
+	<!-- Company -->
+	<bean id="company1" class="domain.Company">
+		<property name="name" value="company1" />
+		<property name="surname" value="García Noriega" />
+		<property name="email" value="company1@acme.com" />
+		<property name="phone" value="+34618396001" />
+		<property name="address" value="Calle El Atributo, 123" />
+		<property name="identifier" value="20063918X" />
+		<property name="userAccount" ref="userAccountCompany1" />
+		<property name="companyName" value="Working4Enjoyment" />
+		<property name="type" value="SL" />
+	</bean>
+	
+	<bean id="company2" class="domain.Company">
+		<property name="name" value="company2" />
+		<property name="surname" value="Del Alba Martín" />
+		<property name="email" value="company2@acme.com" />
+		<property name="phone" value="+34618392011" />
+		<property name="address" value="Calle Hojaldre, 4606" />
+		<property name="identifier" value="20123918Y" />
+		<property name="userAccount" ref="userAccountCompany2" />
+		<property name="companyName" value="Sukafe" />
+		<property name="type" value="SL" />
+	</bean>
+	
+	<bean id="company3" class="domain.Company">
+		<property name="name" value="company3" />
+		<property name="surname" value="Ruiz López" />
+		<property name="email" value="company3@acme.com" />
+		<property name="phone" value="+34621338011" />
+		<property name="address" value="Calle De La Pizza, 13" />
+		<property name="identifier" value="20123918Y" />
+		<property name="userAccount" ref="userAccountCompany3" />
+		<property name="companyName" value="AISS Cream" />
+		<property name="type" value="COOPERATIVA" />
+	</bean>
+	
+	<bean id="company4" class="domain.Company">
+		<property name="name" value="company4" />
+		<property name="surname" value="De la Fuente" />
+		<property name="email" value="company4@acme.com" />
+		<property name="phone" value="+34691238598" />
+		<property name="address" value="Calle Castillo, 01" />
+		<property name="identifier" value="20123918Z" />
+		<property name="userAccount" ref="userAccountCompany4" />
+		<property name="companyName" value="Delafu and Sons" />
+		<property name="type" value="SL" />
+	</bean>
+	
+	<bean id="company5" class="domain.Company">
+		<property name="name" value="company5" />
+		<property name="surname" value="Romero García" />
+		<property name="email" value="company4@acme.com" />
+		<property name="phone" value="+34691238598" />
+		<property name="address" value="Calle Castillo, 01" />
+		<property name="identifier" value="20123918Z" />
+		<property name="userAccount" ref="userAccountCompany5" />
+		<property name="companyName" value="El Bar de los Amigos" />
+		<property name="type" value="SL" />
+	</bean>
+	
+	<bean id="company6" class="domain.Company">
+		<property name="name" value="company6" />
+		<property name="surname" value="Clemente De la Fuente" />
+		<property name="email" value="company6@acme.com" />
+		<property name="phone" value="+34622456112" />
+		<property name="address" value="Calle Plaza, 99" />
+		<property name="identifier" value="20112318H" />
+		<property name="userAccount" ref="userAccountCompany6" />
+		<property name="companyName" value="El Rincón de Antonio" />
+		<property name="type" value="SL" />
+	</bean>
+	
+	<!-- Raffle -->
+	<bean id="raffle1" class="domain.Raffle">
+		<property name="title" value="Rifa benéfica y llévate una PS4" />
+		<property name="description" value="En este caso traemos desde nuestras oficinas en Sevilla una rifa bien bien solidaria. Del importe total de tiques que se vendan, el 50% de los beneficios irán destindo a un colegio en Togo." />
+		<property name="productName" value="PlayStation 4" />
+		<property name="productImages">
+			<list>
+				<value>https://psmedia.playstation.com/is/image/psmedia/ps4-overview-screen-03-eu-06sep16</value>
+				<value>https://media.redadn.es/imagenes/playstation4_314481.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="05/10/2018" />
+		<property name="price" value="1" />
+		<property name="company" ref="company1" />
+		<property name="winner" ref="user1" />
+	</bean>
+	
+	<bean id="raffle2" class="domain.Raffle">
+		<property name="title" value="Sorteamos un lavadora" />
+		<property name="description" value="Sí sí sí! ya está aquí el nuevo sorteo que llevamos un tiempo preparando. En este caso se trata de un estupendo lavavajillas de última generación marca Samsung valorado en 750€." />
+		<property name="productName" value="Samsung In Wash" />
+		<property name="productUrl" value="https://www.samsung.com/us/home-appliances/washers/" />
+		<property name="productImages">
+			<list>
+				<value>http://img.global.news.samsung.com/global/wp-content/uploads/2015/09/Addwash_2.jpg</value>
+				<value>https://img.us.news.samsung.com/us/wp-content/uploads/2016/12/31205307/Image1-Flex-Wash-Flex-Dry-1.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="08/30/2018" />
+		<property name="price" value="2" />
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="raffle3" class="domain.Raffle">
+		<property name="title" value="Sorteo sorpresa" />
+		<property name="description" value="Si te gustan las emociones y las sorpresas esta es tu oportunidad... realizamos desde W4E un sorteo sorpresa. ¿Qué será? Uhhh, solo te podemos adelantar que su precio está entre los 300 y 350 euros. Anímate!" />
+		<property name="productName" value="Regalo Sorpresa" />
+		<property name="productImages">
+			<list>
+				<value>http://carolscaribbeancorner.com/wp-content/uploads/2013/03/Mysterygift11.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="12/15/2018" />
+		<property name="price" value="1" />
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="raffle4" class="domain.Raffle">
+		<property name="title" value="Tarjeta regalo de Amazon" />
+		<property name="description" value="Pequeño sorteo para el próximo mes de mayo por parte de nosotros, de Sukafe, tu empresa de confianza. En este caso vamos a sortear una tarjeta regalo de 50€ para gastar en Amazon, así de sumple. ¡Participa ya!" />
+		<property name="productName" value="Tarjeta regalo de Amazon" />
+		<property name="productUrl" value="https://www.amazon.es/Tarjeta-Regalo-Amazon-es-correo-postal/dp/B007M8RJ3E" />
+		<property name="productImages">
+			<list>
+				<value>https://www.peru-retail.com/wp-content/uploads/170915-amazon-mn-1135_c850ab65307569ac0a1ddaa9ef16187c.jpg</value>
+				<value>https://images-eu.ssl-images-amazon.com/images/G/30/gc/designs/livepreview/a_generic_10_v2016_es_noto_email_v2016_es-main._CB525592981_.png</value>
+			</list>
+		</property>
+		<property name="maxDate" value="05/04/2018" />
+		<property name="price" value="1" />
+		<property name="company" ref="company2" />
+		<property name="winner" ref="user1" />
+	</bean>
+	
+	<bean id="raffle5" class="domain.Raffle">
+		<property name="title" value="Sorteo de un piso en Torrevieja, Alicante" />
+		<property name="description" value="Lo tiramos todo por la ventana, ¡¡nos hemos vuelto locos!! Para celebrar nuestros 10 años en pie, en AISS Cream hemos querido sorprenderemos con este lujoso sorteo de un apartamento en Torrevieja, Alicante." />
+		<property name="productName" value="Apartamento en Torrevieja" />
+		<property name="productImages">
+			<list>
+				<value>http://www.turisbox.com/lugares/wp-content/uploads/2016/05/El-Acequion-Torrevieja.jpg</value>
+				<value>http://www.inmorealty.es/wp-content/uploads/2017/02/piso-venta-alicante-torrevieja-inmorealty-3011-5.jpg</value>
+				<value>http://www.diarioinformacion.com/noticias-hoy/img/piso-alicante-1.jpg</value>
+				<value>http://www.inmorealty.es/wp-content/uploads/2015/11/apartamento-en-venta-vista-bella-torrevieja-alicante-inmorealty-4.jpg</value>
+				<value>http://www.inmorealty.es/wp-content/uploads/2017/02/piso-venta-alicante-torrevieja-inmorealty-3011-7.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="09/09/2019" />
+		<property name="price" value="20" />
+		<property name="company" ref="company3" />
+	</bean>
+	
+	<bean id="raffle6" class="domain.Raffle">
+		<property name="title" value="Jamón del bueno para tu casa: jamón ibérico" />
+		<property name="description" value="Estas navidades no dejes a tu familia sin una buena paletilla de jamón der gueno. Participa en este sorteo que seguro que no te decepcionará. Valorado en 240 euros!!" />
+		<property name="productName" value="Paletilla de jamón ibérico" />
+		<property name="productUrl" value="https://tinyurl.com/y8pl74ek" />
+		<property name="productImages">
+			<list>
+				<value>https://images-na.ssl-images-amazon.com/images/I/91cLKkOqIIL._SL1500_.jpg</value>
+				<value>https://images-na.ssl-images-amazon.com/images/I/714aLdXMoeL._SL1500_.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="12/15/2017" />
+		<property name="price" value="5" />
+		<property name="company" ref="company1" />
+		<property name="winner" ref="user1" />
+	</bean>
+	
+	<bean id="raffle7" class="domain.Raffle">
+		<property name="title" value="Entrada para ver el betis o el sevilla" />
+		<property name="description" value="Sorteamos una entrada para ver a uno de los dos gloriosos equipos de la capital hispalense. ¡Tu eliges quién quieres ver!" />
+		<property name="productName" value="Entradas fútbol" />
+		<property name="productImages">
+			<list>
+				<value>https://www.tenvinilo.com/vinilos-decorativos/img/preview/vinilo-decorativo-escudo-real-betis-7478.png</value>
+				<value>http://sevilla.abc.es/deportes/orgullodenervion/wp-content/uploads/2017/10/Escudo_sevillafc.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="03/10/2018" />
+		<property name="price" value="1" />
+		<property name="company" ref="company4" />
+		<property name="winner" ref="user1" />
+	</bean>
+			
+	<bean id="raffle8" class="domain.Raffle">
+		<property name="title" value="Pantalla ultrawide por la patilla" />
+		<property name="description" value="Valorada en 230 euros te traemos una pantalla de 27 pulgadas ultrawide que te hará la boca agua. Una delicia. Compra ya!" />
+		<property name="productName" value="LG 25UM58-P" />
+		<property name="productUrl" value="https://www.amazon.es/LG-25UM58-P-Monitor-UltraWide-pulgadas/dp/B01AWG4S4K" />
+		<property name="productImages">
+			<list>
+				<value>https://images-na.ssl-images-amazon.com/images/I/31MSkky6Y-L._SX466_.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="04/25/2018" />
+		<property name="price" value="1" />
+		<property name="company" ref="company1" />
+		<property name="winner" ref="user1" />
+	</bean>
+		
+	<bean id="raffle9" class="domain.Raffle">
+		<property name="title" value="LG SmartTV, la envidia de tu cuñado" />
+		<property name="description" value="Gloria bendita esta televisión que te trae la compañía de referencia de la gente que sabe desarrollar bien, W4E. 52 pulgadas de pura ultra mega high definition." />
+		<property name="productName" value="LG 43 pulgadas 43LJ594V" />
+		<property name="productUrl" value="https://tinyurl.com/ybb5e77c" />
+		<property name="productImages">
+			<list>
+				<value>https://images-na.ssl-images-amazon.com/images/I/81QOsztPuLL._SL1500_.jpg</value>
+			</list>
+		</property>
+		<property name="maxDate" value="01/06/2018" />
+		<property name="price" value="2" />
+		<property name="company" ref="company1" />
+		<property name="winner" ref="user1" />
+	</bean>
+	
+	<bean id="raffle10" class="domain.Raffle">
+		<property name="title" value="Video cámara FullHD 4K de Sony" />
+		<property name="description" value="Graba tooodo lo que quieras con esta cámara de última generación que te traemos en un sorteo TOTALMENTE GRATUITO." />
+		<property name="productName" value="Video cámara Sony" />
+		<property name="maxDate" value="12/11/2017" />
+				<property name="productImages">
+			<list>
+			</list>
+		</property>
+		<property name="price" value="0" />
+		<property name="company" ref="company2" />
+		<property name="winner" ref="user2" />
+	</bean>
+	
+	<bean id="raffle11" class="domain.Raffle">
+		<property name="title" value="Cartera Billabong" />
+		<property name="description" value="Una cartera de últimas calidades cocida por los mejores tejedores de Murcia ofrecida por la marca Billabong de forma totalmente GRATUITA." />
+		<property name="productName" value="Cartera Billabong" />
+		<property name="maxDate" value="12/11/2017" />
+		<property name="productImages">
+			<list>
+			</list>
+		</property>
+		<property name="price" value="0" />
+		<property name="company" ref="company3" />
+	</bean>
+	
+	<bean id="raffle12" class="domain.Raffle">
+		<property name="title" value="Xiaomi Redmi Note 4, el móvil de moda" />
+		<property name="description" value="Sukafe te trae el móvil de moda, el móvil que lo está petando en todo el mercado, por solo un euro! Unete a esta locuuuuura." />
+		<property name="productName" value="Xiaomi Redmi Note 4 64GB" />
+		<property name="maxDate" value="10/10/2018" />
+		<property name="productImages">
+			<list>
+			</list>
+		</property>
+		<property name="price" value="1" />
+		<property name="company" ref="company2" />
+	</bean>
+	
+	<bean id="raffle13" class="domain.Raffle">
+		<property name="title" value="Maqueta de avión única!" />
+		<property name="description" value="Una maqueta no solo da diversión sin fin sino que será un bonito tema de conversación para las visitas cuando pregunten por esa cosa que tienes en la estantería. Compra ya un tique, es gratis ;)" />
+		<property name="productName" value="Maqueta de avión de la 1º Guerra Mundial" />
+		<property name="maxDate" value="12/12/2018" />
+		<property name="productImages">
+			<list>
+			</list>
+		</property>
+		<property name="price" value="0" />
+		<property name="company" ref="company3" />
+	</bean>
+	
+	<bean id="raffle14" class="domain.Raffle">
+		<property name="title" value="El anillo único de Saurom" />
+		<property name="description" value="El anillo único fue forjado por Saurom en las calderas del Monte del Destino y entregado a los elfos, pero ahora... TE ELIJE A TI! Compra un tique para esta apasionante rifa en la Tierra Media." />
+		<property name="productName" value="Anillo único" />
+		<property name="maxDate" value="01/01/2020" />
+		<property name="productImages">
+			<list>
+				<value>http://de10.com.mx/sites/default/files/styles/detalle_nota/public/field/image/destacada_senior-anuillos.jpg</value>
+				<value>http://static.alfabetajuega.com/abj_public_files/multimedia/imagenes/201502/98514.alfabetajuega-anillo-unico-020215.jpg</value>
+				<value>https://supercurioso.com/wp-content/uploads/2014/10/elanillo-unico.jpg</value>
+			</list>
+		</property>
+		<property name="price" value="1" />
+		<property name="company" ref="company3" />
+	</bean>
+	
+		
+	<!-- Ticket -->
+	<bean id="ticket1raffle1user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAA" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle1" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket2raffle1user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAb" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle1" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket3raffle1user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAC" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle1" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket4raffle1user2" class="domain.Ticket">
+		<property name="code" value="14180315AAAAd" />
+		<property name="user" ref="user2" />
+		<property name="raffle" ref="raffle1" />
+		<property name="creditCard" ref="creditCard2" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket5raffle1user3" class="domain.Ticket">
+		<property name="code" value="14180315AAAAd" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle1" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket6raffle2user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAE" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle2" />
+		<property name="creditCard" ref="creditCard3" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket7raffle2user4" class="domain.Ticket">
+		<property name="code" value="14180315AAAAF" />
+		<property name="user" ref="user4" />
+		<property name="raffle" ref="raffle2" />
+		<property name="creditCard" ref="creditCard5" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket8raffle2user4" class="domain.Ticket">
+		<property name="code" value="14180315AAAAG" />
+		<property name="user" ref="user4" />
+		<property name="raffle" ref="raffle2" />
+		<property name="creditCard" ref="creditCard5" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket9raffle2user4" class="domain.Ticket">
+		<property name="code" value="14180315AAAAz" />
+		<property name="user" ref="user4" />
+		<property name="raffle" ref="raffle2" />
+		<property name="creditCard" ref="creditCard5" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket10raffle4user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAI" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle4" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket11raffle4user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAJ" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle4" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+
+	<bean id="ticket12raffle4user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAK" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle4" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket13raffle4user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAA8" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle4" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket14raffle5user3" class="domain.Ticket">
+		<property name="code" value="14180315AAAAM" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle5" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket15raffle5user3" class="domain.Ticket">
+		<property name="code" value="14180315AAAAN" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle5" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket16raffle6user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAk" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle6" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket17raffle6user2" class="domain.Ticket">
+		<property name="code" value="14180315AAAA3" />
+		<property name="user" ref="user2" />
+		<property name="raffle" ref="raffle6" />
+		<property name="creditCard" ref="creditCard2" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket18raffle6user2" class="domain.Ticket">
+		<property name="code" value="14180315AAAAQ" />
+		<property name="user" ref="user2" />
+		<property name="raffle" ref="raffle6" />
+		<property name="creditCard" ref="creditCard2" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket19raffle7user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAW" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle7" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket20raffle7user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAS" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle7" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket21raffle8user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAs" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle8" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket22raffle9user1" class="domain.Ticket">
+		<property name="code" value="14180315AAAAU" />
+		<property name="user" ref="user1" />
+		<property name="raffle" ref="raffle9" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket23raffle10user2" class="domain.Ticket">
+		<property name="code" value="14180315AAAAu" />
+		<property name="user" ref="user2" />
+		<property name="raffle" ref="raffle10" />
+		<property name="creditCard" ref="creditCard2" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket24raffle11user2" class="domain.Ticket">
+		<property name="code" value="14180315AAAAW" />
+		<property name="user" ref="user2" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard2" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket25raffle11user2" class="domain.Ticket">
+		<property name="code" value="14180315AAAAO" />
+		<property name="user" ref="user2" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard2" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket26raffle11user3" class="domain.Ticket">
+		<property name="code" value="14180315AAAAZ" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket27raffle11user3" class="domain.Ticket">
+		<property name="code" value="14180315AAAAa" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket28raffle11user3" class="domain.Ticket">
+		<property name="code" value="14180315AAAAB" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket29raffle11user3" class="domain.Ticket">
+		<property name="code" value="14180315AAAAc" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard4" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket30raffle11user4" class="domain.Ticket">
+		<property name="code" value="14180315AAAAD" />
+		<property name="user" ref="user3" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard5" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<bean id="ticket31raffle11user4" class="domain.Ticket">
+		<property name="code" value="14180315AAAAe" />
+		<property name="user" ref="user4" />
+		<property name="raffle" ref="raffle11" />
+		<property name="creditCard" ref="creditCard5" />
+		<property name="isGift" value="false" />
+	</bean>
+	
+	<!-- Identifier -->
+	<bean id="identifier1" class="domain.Identifier">
+		<property name="firstCounter" value="32" />
+		<property name="secondCounter" value="0" />
+		<property name="thirdCounter" value="0" />
+		<property name="fourthCounter" value="0"/>
+		<property name="fivethCounter" value="0"/>
+	</bean>
+	
+	<!-- Level -->
+	<bean id="level1" class="domain.Level">
+		<property name="name" value="Criminal" />
+		<property name="image" value="https://tinyurl.com/yd7wmdzq" />
+		<property name="minPoints" value="-1000" />
+		<property name="maxPoints" value="-1" />
+	</bean>
+	
+	<bean id="level2" class="domain.Level">
+		<property name="name" value="Bronce" />
+		<property name="image" value="https://tinyurl.com/yb3pwvsy" />
+		<property name="minPoints" value="0" />
+		<property name="maxPoints" value="100" />
+	</bean>
+	
+	<bean id="level3" class="domain.Level">
+		<property name="name" value="Plata" />
+		<property name="image" value="https://tinyurl.com/y7rxsfd9" />
+		<property name="minPoints" value="101" />
+		<property name="maxPoints" value="500" />
+	</bean>
+	
+	<bean id="level4" class="domain.Level">
+		<property name="name" value="Oro" />
+		<property name="image" value="https://tinyurl.com/y8mbeq8a" />
+		<property name="minPoints" value="501" />
+		<property name="maxPoints" value="999" />
+	</bean>
+	
+	<bean id="level5" class="domain.Level">
+		<property name="name" value="Diamante" />
+		<property name="image" value="https://tinyurl.com/yal9k4gj" />
+		<property name="minPoints" value="1000" />
+		<property name="maxPoints" value="9999" />
+	</bean>
+	
+	<!-- Answer -->
+	<bean id="answer1" class="domain.Answer">
+		<property name="text" value="No." />
+		<property name="question" ref="question1" />
+		<property name="counter" value="10" />
+	</bean>
+	
+	<bean id="answer2" class="domain.Answer">
+		<property name="text" value="No." />
+		<property name="question" ref="question2" />
+		<property name="counter" value="21" />
+	</bean>
+	
+	<bean id="answer3" class="domain.Answer">
+		<property name="text" value="Vegano." />
+		<property name="question" ref="question3" />
+		<property name="counter" value="33" />
+	</bean>
+	
+	<bean id="answer4" class="domain.Answer">
+		<property name="text" value="Ninguno." />
+		<property name="question" ref="question4" />
+		<property name="counter" value="14" />
+	</bean>
+	
+	<bean id="answer5" class="domain.Answer">
+		<property name="text" value="No." />
+		<property name="question" ref="question5" />
+		<property name="counter" value="18" />
+	</bean>
+	
+	<bean id="answer6" class="domain.Answer">
+		<property name="text" value="Normal." />
+		<property name="question" ref="question3" />
+		<property name="counter" value="16" />
+	</bean>
+	
+	<bean id="answer7" class="domain.Answer">
+		<property name="text" value="Sí, pero no recuerdo." />
+		<property name="question" ref="question1" />
+		<property name="counter" value="47" />
+	</bean>
+	
+	<bean id="answer8" class="domain.Answer">
+		<property name="text" value="No, que yo sepa." />
+		<property name="question" ref="question2" />
+		<property name="counter" value="33" />
+	</bean>
+	
+	<bean id="answer9" class="domain.Answer">
+		<property name="text" value="Sí, a las amapolas." />
+		<property name="question" ref="question1" />
+		<property name="counter" value="31" />
+	</bean>
+	
+	<bean id="answer10" class="domain.Answer">
+		<property name="text" value="No, ninguna." />
+		<property name="question" ref="question2" />
+		<property name="counter" value="25" />
+	</bean>
+	 
+	<bean id="answer11" class="domain.Answer">
+		<property name="text" value="Sí, por favor." />
+		<property name="question" ref="question6" />
+		<property name="counter" value="56" />
+	</bean>
+	
+	<bean id="answer12" class="domain.Answer">
+		<property name="text" value="Sí, mucho." />
+		<property name="question" ref="question7" />
+		<property name="counter" value="19" />
+	</bean>
+	
+	<bean id="answer13" class="domain.Answer">
+		<property name="text" value="Los macarrones." />
+		<property name="question" ref="question8" />
+		<property name="counter" value="24" />
+	</bean>
+	
+	<bean id="answer14" class="domain.Answer">
+		<property name="text" value="Porque quiero precios bajos." />
+		<property name="question" ref="question9" />
+		<property name="counter" value="10" />
+	</bean>
+	
+	<bean id="answer15" class="domain.Answer">
+		<property name="text" value="El cocodrilo." />
+		<property name="question" ref="question10" />
+		<property name="counter" value="11" />
+	</bean>
+	
+	<bean id="answer16" class="domain.Answer">
+		<property name="text" value="1,80 metros." />
+		<property name="question" ref="question11" />
+		<property name="counter" value="19" />
+	</bean>
+	
+	<bean id="answer17" class="domain.Answer">
+		<property name="text" value="De Sevilla." />
+		<property name="question" ref="question12" />
+		<property name="counter" value="25" />
+	</bean>
+	
+	<!-- Question -->
+	<bean id="question1" class="domain.Question">
+		<property name="text" value="¿Tienes alergia a algo?" />
+		<property name="number" value="1" />
+		<property name="survey" ref="survey1" />
+	</bean>
+	
+	<bean id="question2" class="domain.Question">
+		<property name="text" value="¿Sufres alguna enfermedad cardiaca?" />
+		<property name="number" value="2" />
+		<property name="survey" ref="survey1" />
+	</bean>
+	
+	<bean id="question3" class="domain.Question">
+		<property name="text" value="¿Menú especial?" />
+		<property name="number" value="1" />
+		<property name="survey" ref="survey2" />
+	</bean>
+	
+	<bean id="question4" class="domain.Question">
+		<property name="text" value="¿Tienes alguna problema en que te haga el chequeo alguien del sexo opuesto?" />
+		<property name="number" value="1" />
+		<property name="survey" ref="survey3" />
+	</bean>
+	
+	<bean id="question5" class="domain.Question">
+		<property name="text" value="¿En el anterior chequeo se descubrió algun problema?" />
+		<property name="number" value="2" />
+		<property name="survey" ref="survey3" />
+	</bean>
+	
+	<bean id="question6" class="domain.Question">
+		<property name="text" value="¿Prefieres que haya menos anuncios?" />
+		<property name="number" value="1" />
+		<property name="survey" ref="survey4" />
+	</bean>
+	
+	<bean id="question7" class="domain.Question">
+		<property name="text" value="¿Te gusta la electrónica?" />
+		<property name="number" value="1" />
+		<property name="survey" ref="survey5" />
+	</bean>
+	
+	<bean id="question8" class="domain.Question">
+		<property name="text" value="¿Cuál es tu comida favorita?" />
+		<property name="number" value="2" />
+		<property name="survey" ref="survey5" />
+	</bean>
+	
+	<bean id="question9" class="domain.Question">
+		<property name="text" value="¿Por qué quieres comprar con nosotros?" />
+		<property name="number" value="3" />
+		<property name="survey" ref="survey5" />
+	</bean>
+	
+	<bean id="question10" class="domain.Question">
+		<property name="text" value="¿Cuál es tu animal favorito?" />
+		<property name="number" value="4" />
+		<property name="survey" ref="survey5" />
+	</bean>
+	
+	<bean id="question11" class="domain.Question">
+		<property name="text" value="¿Cuánto mides?" />
+		<property name="number" value="5" />
+		<property name="survey" ref="survey5" />
+	</bean>
+	
+	<bean id="question12" class="domain.Question">
+		<property name="text" value="¿De donde eres?" />
+		<property name="number" value="6" />
+		<property name="survey" ref="survey5" />
+	</bean>
+		
+    <!-- Survey -->
+    <bean id="survey1" class="domain.Survey">
+		<property name="title" value="La encuesta que te puede salvar la vida." />
+		<property name="surveyer" ref="company1" />
+	</bean>
+	
+	<bean id="survey2" class="domain.Survey">
+		<property name="title" value="¿Cuánto de importante es para ti la comida?" />
+		<property name="surveyer" ref="moderator2" />
+	</bean>
+	
+	<bean id="survey3" class="domain.Survey">
+		<property name="title" value="¿Te sientes cómodo?" />
+		<property name="surveyer" ref="sponsor1" />
+	</bean>
+	
+	<bean id="survey4" class="domain.Survey">
+		<property name="title" value="Nos preocupamos por ti" />
+		<property name="surveyer" ref="moderator2" />
+	</bean>
+	
+	<bean id="survey5" class="domain.Survey">
+		<property name="title" value="¿Te gustaría mejoras?" />
+		<property name="surveyer" ref="company2" />
+	</bean>
+	
+	<!-- Evaluation -->
+	<bean id="evaluation1" class="domain.Evaluation">
+		<property name="content" value="Buen producto" />
+		<property name="puntuation" value="5" />
+		<property name="isAnonymous" value="true" />
+		<property name="company" ref="company1" />
+        <property name="user" ref="user1" />
+	</bean>
+	
+	<bean id="evaluation2" class="domain.Evaluation">
+		<property name="content" value="No me gustó la empresa" />
+		<property name="puntuation" value="1" />
+		<property name="isAnonymous" value="false" />
+		<property name="company" ref="company2" />
+        <property name="user" ref="user2" />
+	</bean>
+	
+	<bean id="evaluation3" class="domain.Evaluation">
+		<property name="content" value="Regu regu" />
+		<property name="puntuation" value="4" />
+		<property name="isAnonymous" value="true" />
+		<property name="company" ref="company3" />
+        <property name="user" ref="user2" />
+	</bean>
+	
+	<bean id="evaluation4" class="domain.Evaluation">
+		<property name="content" value="Ni bien ni mal" />
+		<property name="puntuation" value="3" />
+		<property name="isAnonymous" value="true" />
+		<property name="company" ref="company2" />
+        <property name="user" ref="user3" />
+	</bean>
+	
+    <bean id="evaluation5" class="domain.Evaluation">
+		<property name="content" value="So good" />
+		<property name="puntuation" value="5" />
+		<property name="isAnonymous" value="true" />
+		<property name="company" ref="company4" />
+        <property name="user" ref="user4" />
+	</bean>
+	
+	<bean id="evaluation6" class="domain.Evaluation">
+		<property name="content" value="Excelente servicio" />
+		<property name="puntuation" value="1" />
+		<property name="isAnonymous" value="false" />
+		<property name="company" ref="company5" />
+        <property name="user" ref="user5" />
+	</bean>
+	
+	<bean id="evaluation7" class="domain.Evaluation">
+		<property name="content" value="Regular la verdad" />
+		<property name="puntuation" value="4" />
+		<property name="isAnonymous" value="true" />
+		<property name="company" ref="company5" />
+        <property name="user" ref="user6" />
+	</bean>
+	
+	<bean id="evaluation8" class="domain.Evaluation">
+		<property name="content" value="Regulin Regulag" />
+		<property name="puntuation" value="3" />
+		<property name="isAnonymous" value="false" />
+		<property name="company" ref="company6" />
+        <property name="user" ref="user6" />
+	</bean>
+	
+	<!-- Tag -->
+	<bean id="tag1" class="domain.Tag">
+		<property name="name" value="electronica" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain1" />
+				<ref bean="bargain2" />
+				<ref bean="bargain3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="tag2" class="domain.Tag">
+		<property name="name" value="chollazo" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain4" />
+				<ref bean="bargain5" />
+				<ref bean="bargain6" />
+				<ref bean="bargain12" />
+				<ref bean="bargain7" />
+				<ref bean="bargain1" />
+				<ref bean="bargain2" />
+			</list>
+		</property>	
+    </bean>
+    
+    <bean id="tag3" class="domain.Tag">
+		<property name="name" value="favorito" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain6" />
+			</list>
+		</property>	
+    </bean>
+
+	<bean id="tag4" class="domain.Tag">
+		<property name="name" value="navidad" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain10" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tag5" class="domain.Tag">
+		<property name="name" value="coches" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain4" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tag6" class="domain.Tag">
+		<property name="name" value="entradas" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain5" />
+				<ref bean="bargain6" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tag7" class="domain.Tag">
+		<property name="name" value="envidia" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain6" />
+				<ref bean="bargain8" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tag8" class="domain.Tag">
+		<property name="name" value="sé el primero" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain1" />
+				<ref bean="bargain2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tag9" class="domain.Tag">
+		<property name="name" value="calentito" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain7" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tag10" class="domain.Tag">
+		<property name="name" value="buen precio" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain9" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tag11" class="domain.Tag">
+		<property name="name" value="viaja" />
+        <property name="bargains">
+			<list>
+				<ref bean="bargain9" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Comment -->
+	<bean id="comment1" class="domain.Comment">
+		<property name="moment" value="02/01/2018 15:30" />
+		<property name="text" value="Buen producto!" />
+		<property name="user" ref="user3" />
+		<property name="bargain" ref="bargain2" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment2" class="domain.Comment">
+		<property name="moment" value="02/16/2018 12:43" />
+		<property name="text" value="¿Cuál es la página del chollo loco?" />
+		<property name="user" ref="user3" />
+		<property name="bargain" ref="bargain1" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment3" class="domain.Comment">
+		<property name="moment" value="02/16/2018 15:21" />
+		<property name="text" value="Es tuchollito.es" />
+		<property name="images">
+			<list>
+				<value>https://vignette.wikia.nocookie.net/simpsons/images/c/ca/742_Evergreen_Terrace.png/revision/latest/scale-to-width-down/640?cb=20130421182211</value>
+				<value>https://falsa.com</value>
+			</list>
+		</property>
+		<property name="user" ref="user1" />
+		<property name="repliedComment" ref="comment2" />
+		<property name="bargain" ref="bargain1" />
+	</bean>
+	
+	<bean id="comment4" class="domain.Comment">
+		<property name="moment" value="02/01/2018 15:30" />
+		<property name="text" value="Ha sido muy divertido" />
+		<property name="user" ref="user1" />
+		<property name="bargain" ref="bargain3" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment5" class="domain.Comment">
+		<property name="moment" value="02/02/2018 15:30" />
+		<property name="text" value="Ya falta menos" />
+		<property name="user" ref="user1" />
+		<property name="bargain" ref="bargain4" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment6" class="domain.Comment">
+		<property name="moment" value="02/03/2018 15:30" />
+		<property name="text" value="Gracias por apuntarse" />
+		<property name="user" ref="user1" />
+		<property name="bargain" ref="bargain4" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment7" class="domain.Comment">
+		<property name="moment" value="02/04/2018 15:30" />
+		<property name="text" value="Bienvenidos a todos" />
+		<property name="user" ref="user2" />
+		<property name="bargain" ref="bargain11" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment8" class="domain.Comment">
+		<property name="moment" value="02/05/2018 15:30" />
+		<property name="text" value="Que buen día hace hoy" />
+		<property name="user" ref="user3" />
+		<property name="bargain" ref="bargain12" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment9" class="domain.Comment">
+		<property name="moment" value="02/06/2018 15:30" />
+		<property name="text" value="Qué ganas que llegue el día" />
+		<property name="user" ref="user1" />
+		<property name="bargain" ref="bargain1" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="comment10" class="domain.Comment">
+		<property name="moment" value="02/16/2018 15:21" />
+		<property name="text" value="Muchas gracias nano!" />
+		<property name="user" ref="user3" />
+		<property name="repliedComment" ref="comment3" />
+		<property name="bargain" ref="bargain1" />
+		<property name="images">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Notification -->
+	<bean id="notification1" class="domain.Notification">
+		<property name="subject" value="¡Enhorabuena, usted ha sido el ganador de la rifa: Jamón del bueno para tu casa: jamón ibérico!" />
+		<property name="actor" ref="user1" />
+		<property name="visited" value="false" />
+	</bean>
+	
+	<bean id="notification2" class="domain.Notification">
+		<property name="subject" value="¡Enhorabuena, usted ha sido el ganador de la rifa: Rifa benéfica y llévate una PS4!" />
+		<property name="actor" ref="user1" />
+		<property name="visited" value="false" />
+	</bean>
+	
+	<bean id="notification3" class="domain.Notification">
+		<property name="subject" value="¡Enhorabuena, usted ha sido el ganador de la rifa: Tarjeta regalo de Amazon!" />
+		<property name="actor" ref="user1" />
+		<property name="visited" value="true" />
+	</bean>
+	
+	<bean id="notification4" class="domain.Notification">
+		<property name="subject" value="¡Enhorabuena, usted ha sido el ganador de la rifa: Entrada para ver el betis o el sevilla!" />
+		<property name="actor" ref="user1" />
+		<property name="visited" value="true" />
+	</bean>
+	
+	<bean id="notification5" class="domain.Notification">
+		<property name="subject" value="¡Enhorabuena, usted ha sido el ganador de la rifa: Pantalla ultrawide por la patilla!" />
+		<property name="actor" ref="user1" />
+		<property name="visited" value="true" />
+	</bean>
+	
+	<bean id="notification6" class="domain.Notification">
+		<property name="subject" value="¡Enhorabuena, usted ha sido el ganador de la rifa: LG SmartTV, la envidia de tu cuñado!" />
+		<property name="actor" ref="user1" />
+		<property name="visited" value="true" />
+	</bean>
+	
+	<bean id="notification7" class="domain.Notification">
+		<property name="subject" value="¡Enhorabuena, usted ha sido el ganador de la rifa: Video cámara FullHD 4K de Sony!" />
+		<property name="actor" ref="user2" />
+		<property name="visited" value="true" />
+	</bean>
+	
+	<!-- Sponsor -->
+	<bean id="sponsor1" class="domain.Sponsor">
+		<property name="name" value="sponsor1" />
+		<property name="surname" value="De Montón" />
+		<property name="email" value="sponsor1@acme.com" />
+		<property name="phone" value="+34603162355" />
+		<property name="address" value="Calle Del Rocio, 134" />
+		<property name="userAccount" ref="userAccountSponsor1" />
+		<property name="identifier" value="20063918-Y" />
+	</bean>
+	
+	<bean id="sponsor2" class="domain.Sponsor">
+		<property name="name" value="sponsor2" />
+		<property name="surname" value="Gyllenhal" />
+		<property name="email" value="sponsor2@acme.com" />
+		<property name="phone" value="+34602245841" />
+		<property name="address" value="Calle Sicab, 87" />
+		<property name="userAccount" ref="userAccountSponsor2" />
+		<property name="identifier" value="35512291A" />
+	</bean>
+	
+	<bean id="sponsor3" class="domain.Sponsor">
+		<property name="name" value="sponsor3" />
+		<property name="surname" value="Eguibar" />
+		<property name="email" value="sponsor1@acme.com" />
+		<property name="phone" value="+34602245841" />
+		<property name="address" value="Calle El Pintor 23" />
+		<property name="userAccount" ref="userAccountSponsor3" />
+		<property name="identifier" value="31251361C" />
+	</bean>
+	
+	<bean id="sponsor4" class="domain.Sponsor">
+		<property name="name" value="sponsor4" />
+		<property name="surname" value="Ripoll" />
+		<property name="email" value="sponsor1@acme.com" />
+		<property name="phone" value="+34602245841" />
+		<property name="address" value="Calle Robledo, 12" />
+		<property name="userAccount" ref="userAccountSponsor4" />
+		<property name="identifier" value="50063918-Z" />
+	</bean>
+	
+	<!-- Sponsorship -->
+	<bean id="sponsorship1" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor1" />
+		<property name="image" value="http://www.cocacolaespana.es/content/dam/journey/es/es/private/historia/love-coca-cola/2015/logo-coca-cola-lead.png" />
+		<property name="url" value="https://www.cocacola.es/es/home/" />
+		<property name="amount" value="20" />
+		<property name="bargain" ref="bargain1" />
+	</bean>
+	
+	<bean id="sponsorship2" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor2" />
+		<property name="image" value="https://i0.wp.com/creatividadenblanco.com/wp-content/uploads/2017/05/fanta_2017_logo_colors.png" />
+		<property name="url" value="https://www.cocacola.es/fanta/es/home/" />
+		<property name="amount" value="30" />
+		<property name="bargain" ref="bargain1" />
+	</bean>
+	
+	<bean id="sponsorship3" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor3" />
+		<property name="image" value="http://www.brandemia.org/sites/default/files/inline/images/logo_nestea_antes_0.jpg" />
+		<property name="url" value="https://www.cocacola.es/nestea/es/home/" />
+		<property name="amount" value="25" />
+		<property name="bargain" ref="bargain1" />
+	</bean>
+	
+	<bean id="sponsorship4" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor4" />
+		<property name="image" value="http://www.ripollfemenia.com/wp-content/uploads/2013/05/lanjaron-LOGO.jpg" />
+		<property name="url" value="https://www.lanjaron.com/" />
+		<property name="amount" value="25" />
+		<property name="bargain" ref="bargain1" />
+	</bean>
+	
+	<bean id="sponsorship5" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor1" />
+		<property name="image" value="http://s3-eu-west-1.amazonaws.com/pruebapd.esy.es/wp-content/uploads/2011/10/bic_logo1.png" />
+		<property name="url" value="https://www.bicworld.com/es" />
+		<property name="amount" value="25" />
+		<property name="bargain" ref="bargain2" />
+	</bean>
+	
+	<bean id="sponsorship6" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor2" />
+		<property name="image" value="https://dlcdnimgs.asus.com/20160129_cosmo/cosmo/images/asus_logo.jpg" />
+		<property name="url" value="https://www.asus.com/es/" />
+		<property name="amount" value="25" />
+		<property name="bargain" ref="bargain2" />
+	</bean>
+	
+	<bean id="sponsorship7" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor3" />
+		<property name="image" value="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/1200px-HP_New_Logo_2D.svg.png" />
+		<property name="url" value="http://www8.hp.com/es/es/home.html" />
+		<property name="amount" value="50" />
+		<property name="bargain" ref="bargain2" />
+	</bean>
+	
+	<bean id="sponsorship8" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor1" />
+		<property name="image" value="https://i2.wp.com/www.expertosenmarca.com/wp-content/uploads/2015/10/hd-wallpaper-ralph-lauren-logo.jpeg" />
+		<property name="url" value="https://www.ralphlauren.com/" />
+		<property name="amount" value="40" />
+		<property name="bargain" ref="bargain3" />
+	</bean>
+	
+	<bean id="sponsorship9" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor2" />
+		<property name="image" value="https://logosmarcas.com/wp-content/uploads/2018/03/Adidas-logo.png" />
+		<property name="url" value="https://www.agenciatelling.com/el-origen-del-logo-de-adidas/" />
+		<property name="amount" value="10" />
+		<property name="bargain" ref="bargain3" />
+	</bean>
+	
+	<bean id="sponsorship10" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor1" />
+		<property name="image" value="http://www.ferniplastmayorista.com/wp-content/uploads/2014/06/Nivea-logo.jpg" />
+		<property name="url" value="https://www.nivea.es/" />
+		<property name="amount" value="10" />
+		<property name="bargain" ref="bargain5" />
+	</bean>
+	
+	<bean id="sponsorship11" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor1" />
+		<property name="image" value="http://logonoid.com/images/gigaset-logo.png" />
+		<property name="url" value="http://www.gigaset.com/es_es/" />
+		<property name="amount" value="3" />
+		<property name="bargain" ref="bargain10" />
+	</bean>
+	
+	<bean id="sponsorship12" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor1" />
+		<property name="image" value="https://d2jljza7x0a5yy.cloudfront.net/media/k2/items/cache/897299971c45604fa1bdefb646b1c4db_XL.jpg?t=1458131205" />
+		<property name="url" value="https://www.factoriadeficcion.com/" />
+		<property name="amount" value="5" />
+		<property name="bargain" ref="bargain8" />
+	</bean>
+	
+	<bean id="sponsorship13" class="domain.Sponsorship">
+		<property name="sponsor" ref="sponsor1" />
+		<property name="image" value="https://andro2id.com/wp-content/uploads/2018/02/logo-xiaomi-2.png" />
+		<property name="url" value="http://www.mi.com/es/" />
+		<property name="amount" value="1" />
+		<property name="bargain" ref="bargain12" />
+	</bean>
+	
+	<!-- Category -->
+	<bean id="category1" class="domain.Category">
+		<property name="name" value="Esto es una categoría por defecto" />
+		<property name="image" value="http://www.finanzzas.com/wp-content/uploads/DefaultLogo.png" />
+		<property name="defaultCategory" value="true" />
+		<property name="bargains">
+			<list>
+				<ref bean="bargain4" />
+				<ref bean="bargain5" />
+				<ref bean="bargain6" />
+				<ref bean="bargain9" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category2" class="domain.Category">
+		<property name="name" value="Electrónica" />
+		<property name="image" value="http://ciinova.com/wp-content/uploads/2016/09/casa-central-ingenieria-civil-electronica.w700.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="bargains">
+			<list>
+				<ref bean="bargain1" />
+				<ref bean="bargain2" />
+				<ref bean="bargain3" />
+				<ref bean="bargain8" />
+				<ref bean="bargain11" />
+				<ref bean="bargain12" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category3" class="domain.Category">
+		<property name="name" value="Portátiles" />
+		<property name="image" value="https://lifeinformatica.com/wp-content/uploads/Life/Familias/family-portatiles-y-accesorios-01_300x300.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category2" />
+		<property name="bargains">
+			<list>
+				<ref bean="bargain3" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category4" class="domain.Category">
+		<property name="name" value="Videoconsolas" />
+		<property name="image" value="http://www.avproyectores.es/images/videoconsolas.png" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category2" />
+		<property name="bargains">
+			<list>
+				<ref bean="bargain1" />
+				<ref bean="bargain2" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category5" class="domain.Category">
+		<property name="name" value="Móviles" />
+		<property name="image" value="https://www.movilzona.es/app/uploads/2016/10/moviles-intex.jpg?x=720" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category2" />
+		<property name="bargains">
+			<list>
+				<ref bean="bargain8" />
+				<ref bean="bargain12" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category6" class="domain.Category">
+		<property name="name" value="Hogar" />
+		<property name="image" value="https://www.verti.es/media/images/seguros-hogar.png" />
+		<property name="defaultCategory" value="false" />
+		<property name="bargains">
+			<list>
+				<ref bean="bargain7" />
+				<ref bean="bargain10" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category7" class="domain.Category">
+		<property name="name" value="Cocina y comedor" />
+		<property name="image" value="http://www.leroymerlin.es/dam/jcr:5b9cbf1c-d045-44a6-84da-7dc67ad42097/cocina5.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category6" />
+		<property name="bargains">
+			<list>
+				<ref bean="bargain10" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category8" class="domain.Category">
+		<property name="name" value="Baño" />
+		<property name="image" value="https://decoracion2.com/imagenes/2014/12/cuarto-de-bano-1.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category6" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category9" class="domain.Category">
+		<property name="name" value="Iluminación" />
+		<property name="image" value="https://revistacitylife.com/wp-content/uploads/2018/03/guia-basica-iluminacion.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category6" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category10" class="domain.Category">
+		<property name="name" value="Limpieza" />
+		<property name="image" value="http://sanitum.com/wp-content/uploads/2015/12/limpieza-y-desinfeccion-hogar-germenes-virus-bacterias-hongos-sanitum.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category6" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category11" class="domain.Category">
+		<property name="name" value="Moda" />
+		<property name="image" value="http://tinyur1.co/wp-content/uploads/2017/01/moda.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category12" class="domain.Category">
+		<property name="name" value="Mujer" />
+		<property name="image" value="https://i.ytimg.com/vi/HfgEQ7cmjq8/maxresdefault.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category13" class="domain.Category">
+		<property name="name" value="Hombre" />
+		<property name="image" value="http://abcrevista.com/wp-content/uploads2/2017/05/consejos-de-moda-para-hombres-jeans.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category14" class="domain.Category">
+		<property name="name" value="Niña" />
+		<property name="image" value="https://i.pinimg.com/originals/6d/46/75/6d4675afabdf3d086d4e83d8617a9b43.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category15" class="domain.Category">
+		<property name="name" value="Niño" />
+		<property name="image" value="http://lamodaatualcance.com/wp-content/uploads/cheeky-coleccion-oton%CC%83o-invierno-2012-moda1.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category16" class="domain.Category">
+		<property name="name" value="Bebé" />
+		<property name="image" value="http://www.blogmodabebe.com/wp-content/uploads/2016/08/nueva-coleccion-de-moda-bebe-de-pili-carrera-blogmodabebe-116.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category17" class="domain.Category">
+		<property name="name" value="Bolsos" />
+		<property name="image" value="https://blogs.hogarmania.com/wp-content/uploads/2017/01/bolsos-personalizables-Justo.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category18" class="domain.Category">
+		<property name="name" value="Joyería" />
+		<property name="image" value="https://i.ytimg.com/vi/RI0v8-3XmiY/maxresdefault.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="category19" class="domain.Category">
+		<property name="name" value="Relojes" />
+		<property name="image" value="https://images-na.ssl-images-amazon.com/images/I/81PAdiIjRzL._UX569_.jpg" />
+		<property name="defaultCategory" value="false" />
+		<property name="fatherCategory" ref="category11" />
+		<property name="bargains">
+			<list>
+			</list>
+		</property>	
+	</bean>
+	
+	
+	<!-- Bargain -->
+	<bean id="bargain1" class="domain.Bargain">
+		<property name="productName" value="PlayStation 4" />
+		<property name="productUrl" value="https://www.game.es/videojuegos/playstation-4" />
+		<property name="description" value="Últimas promociones" />
+		<property name="price" value="200" />
+		<property name="minimumPrice" value="100" />
+		<property name="originalPrice" value="300" />
+		<property name="estimatedSells" value="50" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="FL6g5ty234" />
+		<property name="productImages">
+			<list>
+				<value>https://http2.mlstatic.com/D_Q_NP_389521-MLA20811128213_072016-Q.jpg</value>
+				<value>https://http2.mlstatic.com/rosario-playstation-4-sony-ps4-500gb-play4-garantia-nuevas-D_NQ_NP_18094-MLA20149500299_082014-F.jpg</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>	
+	
+	<bean id="bargain2" class="domain.Bargain">
+		<property name="productName" value="XBOX" />
+		<property name="productUrl" value="https://www.xbox.com/es-ES" />
+		<property name="description" value="Último modelo." />
+		<property name="price" value="200" />
+		<property name="minimumPrice" value="100" />
+		<property name="originalPrice" value="300" />
+		<property name="estimatedSells" value="10" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="0LjshY61920" />
+		<property name="productImages">
+			<list>
+				<value>https://compass-ssl.xbox.com/assets/3a/f0/3af0da7b-f5d0-418f-88ab-8ae631aafe9d.jpg?n=X1-Wireless-Controller-White_gallery_1056x594_01.jpg</value>
+				<value>https://compass-ssl.xbox.com/assets/e7/d4/e7d46aea-90d0-4bf1-9544-cc85d59f6d18.jpg?n=Xbox-Family_Home-Hero-0_FY-18-X1X-Lead_1067x667_02.jpg</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>	
+	
+	<bean id="bargain3" class="domain.Bargain">
+		<property name="productName" value="MSI" />
+		<property name="productUrl" value="https://www.pccomponentes.com/msi-gl62m-7rdx-2203xes-intel-core-i5-7300hq-8gb-1tb-gtx-1050-156?gclid=EAIaIQobChMI24yIqv-R2wIVgcCyCh0-dwhbEAQYASABEgIW2PD_BwE" />
+		<property name="description" value="Consigue ahora este magnifico portátil a un precio regalado." />
+		<property name="price" value="400" />
+		<property name="minimumPrice" value="100" />
+		<property name="originalPrice" value="450" />
+		<property name="estimatedSells" value="5" />
+		<property name="isPublished" value="true" />
+		<property name="productImages">
+			<list>
+				<value>https://images.anandtech.com/doci/12307/carouselgt75vrtitproklr1550_678x452.jpg</value>
+				<value>https://www.profesionalreview.com/wp-content/uploads/2018/01/MSI-GE63-73-Raider-RGB.png</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>	
+	
+	<bean id="bargain4" class="domain.Bargain">
+		<property name="productName" value="Ford Mondeo" />
+		<property name="productUrl" value="https://www.ford.es/turismos/mondeo" />
+		<property name="description" value="Consigue ahora este Ford Mondeo pagando lo mínimo." />
+		<property name="price" value="2000" />
+		<property name="minimumPrice" value="1000" />
+		<property name="originalPrice" value="2000" />
+		<property name="estimatedSells" value="25" />
+		<property name="isPublished" value="true" />
+		<property name="productImages">
+			<list>
+				<value>https://media3.ocu.org//images/BF6ED83321B467BC3F27AA737670783F6669F373/h300-c4/ic0900854460000.jpg</value>
+				<value>https://d1eip2zddc2vdv.cloudfront.net/dphotos/750x400/13869-1443635803.jpg</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>	
+	
+	<bean id="bargain5" class="domain.Bargain">
+		<property name="productName" value="Dos entradas Disneyland Paris" />
+		<property name="productUrl" value="http://www.disneylandparis.es/" />
+		<property name="description" value="Escápate un fin de semana y vive una experiencia inolvidable." />
+		<property name="price" value="20" />
+		<property name="minimumPrice" value="0" />
+		<property name="originalPrice" value="30" />
+		<property name="estimatedSells" value="2" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="883ddu2JSJ22" />
+		<property name="productImages">
+			<list>
+				<value>http://weloversize.com/wp-content/uploads/2018/03/Disney-header.jpg</value>
+				<value>http://cdn4.dlp-media.com/resize/mwImage/1/640/360/75/wdpromedia.disney.go.com/media/wdpro-dlp-assets/prod/es-es/system/images/n013051_2019may13_menagerie-du-royaume_16-9.jpg</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="bargain6" class="domain.Bargain">
+		<property name="productName" value="Abono Sevilla FC" />
+		<property name="productUrl" value="http://sevillafc.es/" />
+		<property name="description" value="Vive la próxima temporada al mejor precio." />
+		<property name="price" value="30" />
+		<property name="minimumPrice" value="30" />
+		<property name="originalPrice" value="30" />
+		<property name="estimatedSells" value="5" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="IUEncd7822" />
+		<property name="productImages">
+			<list>
+				<value>http://e00-marca.uecdn.es/assets/multimedia/imagenes/2018/02/08/15180917158846.jpg</value>
+				<value>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZzky7Xbg_On-8oJHA8ljr_Rm0zw-NHM5gai0KxOmFZgQOAbM</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="bargain7" class="domain.Bargain">
+		<property name="productName" value="Batamanta" />
+		<property name="productUrl" value="http://batamanta.es/" />
+		<property name="description" value="Lo mejor para estar por casa." />
+		<property name="price" value="15" />
+		<property name="minimumPrice" value="0" />
+		<property name="originalPrice" value="15" />
+		<property name="estimatedSells" value="50" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="Isdofos09PP822" />
+		<property name="productImages">
+			<list>
+				<value>http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/02/20/Recortada/img_jsilvestre_20170220-194423_imagenes_lv_terceros_batamanta_dos-469-kZ2D-U42182488553QHE-992x558@LaVanguardia-Web.png</value>
+				<value>http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/02/20/img_jsilvestre_20170220-194423_imagenes_lv_terceros_batamanta_regalopedia.jpg</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="bargain8" class="domain.Bargain">
+		<property name="productName" value="Samsung S9" />
+		<property name="productUrl" value="http://www.samsung.com/es/smartphones/galaxy-s9/shop/" />
+		<property name="description" value="Disfruta del smartphone que siempre quisiste tener." />
+		<property name="price" value="95" />
+		<property name="minimumPrice" value="50" />
+		<property name="originalPrice" value="100" />
+		<property name="estimatedSells" value="20" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="IUEncdspf7PP822" />
+		<property name="productImages">
+			<list>
+				<value>http://www.directd.com.my/content/images/thumbs/0020896_samsung-galaxy-s9-ready-stock-freebies-worth-rm200.png</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="bargain9" class="domain.Bargain">
+		<property name="productName" value="Viajes baratos" />
+		<property name="productUrl" value="https://www.skyscanner.es/" />
+		<property name="description" value="Disfruta del viaje que más te guste" />
+		<property name="price" value="100" />
+		<property name="minimumPrice" value="50" />
+		<property name="originalPrice" value="100" />
+		<property name="estimatedSells" value="100" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="dsj7PP687T" />
+		<property name="productImages">
+			<list>
+				<value>http://pic.vpackage.net/viaje_a_Zanzibar/image-003_24900.jpg</value>
+				<value>https://www.felicesvacaciones.es/img/2016/02/26/fv_dubai_mauricio-05a.jpg</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="bargain10" class="domain.Bargain">
+		<property name="productName" value="Cesta de Navidad" />
+		<property name="productUrl" value="https://www.lotesycestasdenavidad.es/" />
+		<property name="description" value="Ya pronto llegan estas fechas, no lo dejes escapar..." />
+		<property name="price" value="2" />
+		<property name="minimumPrice" value="0" />
+		<property name="originalPrice" value="5" />
+		<property name="estimatedSells" value="25" />
+		<property name="isPublished" value="true" />
+		<property name="discountCode" value="9876yui87T" />
+		<property name="productImages">
+			<list>
+				<value>https://www.sadival.com/189-thickbox_default/cesta-de-navidad-65.jpg</value>
+				<value>https://www.shbarcelona.es/blog/es/wp-content/uploads/2015/11/34ooe49.png</value>
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="bargain11" class="domain.Bargain">
+		<property name="productName" value="Televisores" />
+		<property name="productUrl" value="https://www.pccomponentes.com/televisores" />
+		<property name="description" value="Renueva tu televisor" />
+		<property name="price" value="50" />
+		<property name="minimumPrice" value="0" />
+		<property name="originalPrice" value="50" />
+		<property name="estimatedSells" value="25" />
+		<property name="isPublished" value="false" />
+		<property name="productImages">
+			<list>
+				
+			</list>
+		</property>
+		<property name="company" ref="company1" />
+	</bean>
+	
+	<bean id="bargain12" class="domain.Bargain">
+		<property name="productName" value="Teléfonos" />
+		<property name="productUrl" value="https://www.phonehouse.es/moviles/moviles-libres.html" />
+		<property name="description" value="Renueva tu teléfono" />
+		<property name="price" value="9" />
+		<property name="minimumPrice" value="0" />
+		<property name="originalPrice" value="10" />
+		<property name="estimatedSells" value="20" />
+		<property name="isPublished" value="false" />
+		<property name="productImages">
+			<list>
+				
+			</list>
+		</property>
+		<property name="company" ref="company2" />
+	</bean>
+	
+</beans>

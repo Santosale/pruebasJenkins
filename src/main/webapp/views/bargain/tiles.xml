@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="bargain/display" extends="master.page">	
+		<put-attribute name="title" value="Bargain" />
+		<put-attribute name="body" value="/views/bargain/display.jsp" />
+	</definition>
+	
+	<definition name="bargain/list" extends="master.page">
+		<put-attribute name="title" value="Bargains" />
+		<put-attribute name="body" value="/views/bargain/list.jsp" />
+	</definition>
+
+	<definition name="bargain/edit" extends="master.page">
+		<put-attribute name="title" value="Edit Bargain" />
+		<put-attribute name="body" value="/views/bargain/edit.jsp" />
+	</definition>
+	
+	<definition name="bargain/create" extends="master.page">
+		<put-attribute name="title" value="Create Bargain" />
+		<put-attribute name="body" value="/views/bargain/edit.jsp" />
+	</definition>
+
+</tiles-definitions>
