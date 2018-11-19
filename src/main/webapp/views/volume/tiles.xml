@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="volume/list" extends="master.page">	
+		<put-attribute name="title" value="List of volume" />
+		<put-attribute name="body" value="/views/volume/list.jsp" />
+	</definition>
+	
+	<definition name="volume/create" extends="master.page">	
+		<put-attribute name="title" value="Create volume" />
+		<put-attribute name="body" value="/views/volume/edit.jsp" />
+	</definition>
+	
+	<definition name="volume/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit volume" />
+		<put-attribute name="body" value="/views/volume/edit.jsp" />
+	</definition>
+	
+	<definition name="volume/display" extends="master.page">	
+		<put-attribute name="title" value="Volume" />
+		<put-attribute name="body" value="/views/volume/display.jsp" />
+	</definition>
+
+</tiles-definitions>
