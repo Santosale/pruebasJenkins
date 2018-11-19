@@ -156,7 +156,7 @@ public class FolderService {
 		// Un actor solo puede crear carpetas para si mismo y no pueden ser del
 		// Sistema
 		// Mirar que si se peristen/crear o cambian carpetas del sistema sea un
-		// actor que todavía no se ha guardado
+		// actor que todavia no se ha guardado
 		// Hay que tener en cuenta que no se pueden modificar las del sistema,
 		// pero si se pueden meter mensajes en ella.
 		// Los actores no pueden borrar, modificar o mover las carpetas del
